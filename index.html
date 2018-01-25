@@ -18,6 +18,9 @@
         padding : 10px;
         padding-left: 71%;
       }
+      input {
+        margin: 0 10px 0 10px;
+      }
     </style>
   </head>
   <body>
@@ -29,5 +32,31 @@
       <button>Zone de texte</button>
       <button>Bouton</button>
     </div>
+
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+      //$('#gauche').text('Hello World !');
+      //$('#droite').html('hr').css('width','100px');
+      $(function() { // Quand on clic sur un bouton
+       /*$('button:last').after('<br /><br /><hr><label for="label">Texte du label <input type="text" name="label" id="label" /><button> Ok </button>');*/
+     
+      $( "button:first" ).click(function() {
+        $('button:last').after('<br /><br /><hr><label for="label">Texte du label <input type="text" name="label" id="label" /><button> Ok </button>');
+      });
+
+      $( "button:eq(1)" ).click(function() {
+        $('button:last').after('<br /><br /><hr><label for="texte">id de la zone de texte <input type="text" name="texte" id="texte" /><button> Ok </button>');
+      });
+
+
+      $( "button:last" ).click(function() {
+        $('button:last').after('<br /><br /><hr><label for="bouton">Texte du bouton <input type="text" name="bouton" id="bouton" /><button> Ok </button>');
+        });
+       /*
+       $('button:last').after('<br /><br /><hr><label for="texte">id de la zone de texte <input type="text" name="texte" id="texte" /><button> Ok </button>');
+
+       $('button:last').after('<br /><br /><hr><label for="bouton">Texte du bouton <input type="text" name="bouton" id="bouton" /><button> Ok </button>');*/
+      });
+    </script>
   </body>
 </html>
